@@ -5,6 +5,7 @@
     "jsx": "react-jsx",
     "module": "ES2020",
     "noEmit": true,
+    "moduleResolution": "node",
     "isolatedModules": true, 
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
