@@ -1,0 +1,57 @@
+body {
+    /** background: white; **/
+    font-family: arial;
+    margin-top: 2%;
+    margin-right: 15%;
+    margin-bottom: 2%;
+    margin-left: 15%;
+}
+main {
+    /** background-color: white; **/
+    Padding: 5%;
+}
+Header {
+    margin-bottom: 3%;
+}
+
+h1, h2, li{
+    color: navy;
+}
+a{
+    color: white;
+    font-weight: bold;
+}
+a:hover{
+    text-decoration: none;
+}
+p{
+    background: white;
+    color: black;
+    padding: All;
+}
+.Nav{
+    background:navy;
+    padding-top: 3%;
+    padding-bottom:1%;
+    Padding-right: 5%;
+    Padding-left: 5%;
+    color: white;
+    align-content: center;
+}
+.main{
+    background:White;
+    Padding-right: 5%;
+    Padding-left: 5%;
+    Padding-top: 5%;
+    Padding-bottom: 5%;
+}
+.Footer{
+    background: navy;
+    color:white;
+    margin-top:3%;
+    padding-top:1%;
+    padding-bottom:3%;
+    Padding-right: 5%;
+    Padding-left: 5%;
+    align-content: center;
+}
