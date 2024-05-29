@@ -2,7 +2,7 @@ import request from 'superagent'
 // import { Cocktail } from '../../models/cocktails'
 const rootUrl = import.meta.env.API_URL || 'https://cocktail-z2ed.onrender.com/api/v1/cocktails/'
 
-export async function getAllCocktails(){ 
+export async function getAllCocktailsApi(){ 
     try {
       const response = await request.get(rootUrl)
       return response.body
@@ -11,7 +11,7 @@ export async function getAllCocktails(){
     }
   }
 
-  export async function getACocktail(cId: number) {
+  export async function getACocktailApi(cId: number) {
     try {
       const response = await request.get(rootUrl + cId)
       return response.body
