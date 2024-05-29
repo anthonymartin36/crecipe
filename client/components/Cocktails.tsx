@@ -1,15 +1,47 @@
 import Footer from './Footer.tsx'
 import Nav from './Navbar.tsx'
+import { useQuery } from '@tanstack/react-query'
+import { getAllCocktailApi } from '../api/api-cocktails.ts'
+import { Link } from 'react-router-dom'
+import './Cocktail.css'
 
 function Cocktails() {
     //const { data } = useFruits()
+    const {
+      data: cocktail,
+      isLoading,
+      isError,
+    } = useQuery({
+      queryKey: ['cocktail'],
+      queryFn: () => getAllCocktailApi(),
+    })
+
+    if (isError) {
+      return (
+        <div className="loading">
+          <h1 className="loading-heading">Something's broken!</h1>
+        </div>
+      )
+    }
   
+    if (!cocktail || isLoading) {
+      return (
+        <div className="loading">
+          <h1 className="loading-heading">Just a Sec!!</h1>
+        </div>
+      )
+    }
+
     return (
       <>
         <Nav />
-        <div className="Cocktails">
+        <div className='cocktail' id='cocktail'>
+        <div className='container' id='container'><p>
             List of Cocktail
-        </div>
+            {cocktail.map((c : any) => ( 
+        <div className='content' key={c.id} > <Link className="cocktail-list-name" to={`${c.id}`} >{c.title}</Link> </div>
+        ))}
+        </p> </div> </div>
         <Footer />
       </>
     )

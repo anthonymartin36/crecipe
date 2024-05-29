@@ -1,0 +1,21 @@
+.cocktail {
+    width: 100%;
+}
+
+.cocktail .container {
+    width: 1240px;
+    margin: 4rem auto;
+    padding: 4rem 0rem;
+}
+
+.cocktail h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.cocktail .container .content {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+    margin: 4rem 0;
+}
