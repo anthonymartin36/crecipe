@@ -36,12 +36,14 @@ function Cocktails() {
       <>
         <Nav />
         <div className='cocktail' id='cocktail'>
-        <div className='container' id='container'><p>
+        <div className='container' id='container'>
             List of Cocktail
             {cocktail.map((c : any) => ( 
-        <div className='content' key={c.id} > <Link className="cocktail-list-name" to={`${c.id}`} >{c.title}</Link> </div>
+        <div className='content' key={c.id} >
+        <p> <Link className="cocktail-list-name" to={`${c.id}`} >{c.title}</Link> </p> 
+        </div>
         ))}
-        </p> </div> </div>
+        </div> </div>
         <Footer />
       </>
     )

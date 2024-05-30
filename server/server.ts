@@ -2,7 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import * as Path from 'node:path'
 
-import cocktails from './routes/cocktails.js'
+//import cocktails from './routes/cocktails.js'
 import * as dotenv from 'dotenv'
 
 const server = express()
@@ -11,7 +11,7 @@ server.use(cors({methods:["get","post","put","delete"],origin:'*'}))
 dotenv.config()
 server.use(express.json())
 
-server.use('/api/v1/cocktails', cocktails)
+//server.use('/api/v1/cocktails', cocktails)
 
 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
   const envConfig = dotenv.config()

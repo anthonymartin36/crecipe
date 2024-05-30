@@ -37,10 +37,10 @@ function Cocktail() {
         <Nav />
         <div className='cocktail' id='cocktail'>
         <div className='container' id='container'>
-        <p>Cocktail : <div className='content' key={cocktail.id}>
-           {cocktail.title} </div></p>
-          </div>
-          </div>
+        <div className='content' key={cocktail.id}>
+        <p>Cocktail :    {cocktail.title} </p> </div>
+        </div>
+        </div>
         <Footer />
       </>
     )
