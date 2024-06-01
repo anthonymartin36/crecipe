@@ -13,9 +13,45 @@
     text-align: center;
 }
 
-.cocktail .container .content {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 20px;
-    margin: 4rem 0;
+.cocktail h3 {
+    font-size: 3rem;
+    text-align: left;
+}
+
+.cocktail img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 350px;
+    float: right;
+  }
+
+.cocktail p {
+    padding: 35px;
+  }
+
+.cocktail button {
+    margin-top: 1rem;
+}
+
+@media screen and (max-width:940px) {
+    .cocktail .container {
+        grid-template-columns: 1fr;
+    }
+
+    .cocktail .container {
+        width: 100%;
+    }
+
+    .cocktail .container img {
+        padding: 3rem;
+        width: 70vw;
+    }
+
+    .cocktail .container .col-2 {
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    
 }

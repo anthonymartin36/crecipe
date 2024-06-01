@@ -32,14 +32,24 @@ function Cocktail() {
       </div>
     )
   }
-  console.log("Test URL") 
     return (
       <>
         <Nav />
         <div className='cocktail' id='cocktail'>
         <div className='container' id='container'>
         <div className='content' key={cocktail.id}>
-        <p>Cocktail :   { cocktail.title } </p> </div>
+        <h2>Cocktail :   { cocktail.title } </h2> 
+        <p>Description : { cocktail.description } </p>
+        <p><img src={`../image/${cocktail.image}`}  alt={`${cocktail.description}`}/> </p>
+        <h3>Ingredients</h3>
+        {cocktail.ingredients.map((ingredient: any, index: any) => (
+        <p key={index}>Ingredient: {index + 1}, Quantity: {ingredient.quantity}</p>
+        ))}
+        <h3>Directions</h3>
+        {cocktail.directions.map((directions: any, index: any) => (
+        <p key={index}>Step: {directions}</p>
+        ))}
+        </div>
         </div>
         </div>
         <Footer />
