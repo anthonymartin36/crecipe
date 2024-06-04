@@ -2,9 +2,9 @@ import React from 'react'
 //import { Link } from 'react-router-dom'
 
 import './Projects.css'
-import Prj1 from '../images/number1.jpg'
-import Prj2 from '../images/number2.jpg'
-import Prj3 from '../images/number3.jpg'
+import Prj1 from '../picture/number1.jpg'
+import Prj2 from '../picture/number2.jpg'
+import Prj3 from '../picture/number3.jpg'
 
 const Projects = () => {
     return (

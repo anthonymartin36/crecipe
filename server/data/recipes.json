@@ -4,7 +4,7 @@
         "id": 1,
         "title": "Margarita",
         "description": "A classic cocktail made with tequila, lime juice, and orange liqueur.",
-        "image": "margarita.jpg",
+        "image": "../image/margarita.jpg",
         "ingredients": [
           {"ingredient": "Tequila", "quantity": "2 oz"},
           {"ingredient": "Lime Juice", "quantity": "1 oz"},

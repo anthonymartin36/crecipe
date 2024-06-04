@@ -19,17 +19,22 @@ function Cocktail() {
 
   if (isError) {
     return (
+    <><Nav />
       <div className="loading">
         <h1 className="loading-heading">Something's broken!</h1>
       </div>
+      <Footer /></>
     )
   }
 
   if (!cocktail || isLoading) {
     return (
+      <><Nav />
       <div className="loading">
         <h1 className="loading-heading">Just a Sec!!</h1>
+        <p> This site may take 20 seconds to warm up! Please wait ... </p>
       </div>
+      <Footer /></>
     )
   }
     return (
@@ -40,7 +45,7 @@ function Cocktail() {
         <div className='content' key={cocktail.id}>
         <h2>Cocktail :   { cocktail.title } </h2> 
         <p>Description : { cocktail.description } </p>
-        <p><img src={`../image/${cocktail.image}`}  alt={`${cocktail.description}`}/> </p>
+        <p><img src={`${cocktail.image}`}  alt={`${cocktail.description}`}/> </p>
         <h3>Ingredients</h3>
         {cocktail.ingredients.map((ingredient: any, index: any) => (
         <p key={index}>Ingredient: {index + 1}, Quantity: {ingredient.quantity}</p>

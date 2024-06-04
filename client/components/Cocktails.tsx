@@ -18,17 +18,22 @@ function Cocktails() {
 
     if (isError) {
       return (
+        <><Nav />
         <div className="loading">
           <h1 className="loading-heading">Something's broken!</h1>
         </div>
+        <Footer /></>
       )
     }
   
     if (!cocktail || isLoading) {
       return (
+        <><Nav />
         <div className="loading">
           <h1 className="loading-heading">Just a Sec!!</h1>
+          <p> This site may take 20 seconds to warm up! Please wait ... </p>
         </div>
+        <Footer /></>
       )
     }
 
