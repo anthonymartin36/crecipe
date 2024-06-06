@@ -5,6 +5,7 @@ import { useQuery } from '@tanstack/react-query'
 import { getACocktailApi } from '../api/api-cocktails.ts'
 import './Cocktail.css'
 
+const imageUrl = import.meta.env.VITE_IMAGE_URL
 
 function Cocktail() {
   const { cId } = useParams()
@@ -50,7 +51,7 @@ function Cocktail() {
         <div className='content' key={cocktail.id}>
         <h2>Cocktail :   { cocktail.title } </h2> 
         <p>Description : { cocktail.description } </p>
-        <p><img src={`${import.meta.env.VITE_IMAGE_URL}${cocktail.image}`} alt={cocktail.description}/> </p>
+        <p><img src={`${imageUrl}${cocktail.image}`} alt={cocktail.description}/> </p>
         <h4>Ingredients</h4>
         {cocktail.ingredients.map((ingredient: any, index: any) => (
         <p key={index}>{index + 1}: <Link to={`${ingredient.ingredient}`}>{ingredient.ingredient}</Link> Quantity: {ingredient.quantity}</p>
