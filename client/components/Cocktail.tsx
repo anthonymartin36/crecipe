@@ -1,9 +1,10 @@
 import Footer from './Footer.tsx'
 import Nav from './Navbar.tsx'
-import { useParams } from 'react-router-dom'
+import {Link,  useParams } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { getACocktailApi } from '../api/api-cocktails.ts'
 import './Cocktail.css'
+
 
 function Cocktail() {
   const { cId } = useParams()
@@ -49,12 +50,12 @@ function Cocktail() {
         <div className='content' key={cocktail.id}>
         <h2>Cocktail :   { cocktail.title } </h2> 
         <p>Description : { cocktail.description } </p>
-        <p><img src={cocktail.image} alt={cocktail.description}/> </p>
-        <h3>Ingredients</h3>
+        <p><img src={`${import.meta.env.VITE_IMAGE_URL}${cocktail.image}`} alt={cocktail.description}/> </p>
+        <h4>Ingredients</h4>
         {cocktail.ingredients.map((ingredient: any, index: any) => (
-        <p key={index}>Ingredient: {index + 1}, Quantity: {ingredient.quantity}</p>
+        <p key={index}>{index + 1}: <Link to={`${ingredient.ingredient}`}>{ingredient.ingredient}</Link> Quantity: {ingredient.quantity}</p>
         ))}
-        <h3>Directions</h3>
+        <h4>Directions</h4>
         {cocktail.directions.map((directions: any, index: any) => (
         <p key={index}>Step: {directions}</p>
         ))}

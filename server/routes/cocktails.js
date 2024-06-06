@@ -31,6 +31,37 @@ router.get('/:cId', async (req, res) => {
   }
 })
 
+router.get('/filter/:ingredient', async (req, res) => {
+  
+  const ingredient = req.params.ingredient.toLocaleLowerCase()
+  const data = await awaitingReadFile(file)
+  //Convert to object
+  const cocktails = data.cocktails
+
+  //console.log("ingredient : ", ingredient)
+  //filters through ingredients, checks type of ingredient
+  let results = cocktails.filter((cocktail) => {
+    //return true if matches
+    //one of the ingredients' types has to match
+    //get the ingredient of the recipe and stick into a variable
+  let currentIngredients = cocktail.ingredients
+    //map through the ingredients
+    //create array of only the ingredient name
+    currentIngredients = currentIngredients.map((ingredientObj) => {
+      return ingredientObj.ingredient.toLocaleLowerCase()
+    })
+    //checks if the ingredient is in that list
+    //returns true if it is
+    return currentIngredients.includes(ingredient)
+  })
+  try {
+    res.json(results)
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ message: 'Something went wrong' })
+  }
+})
+
   async function awaitingReadFile(file) {
     let data
     try {

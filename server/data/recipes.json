@@ -4,7 +4,7 @@
         "id": 1,
         "title": "Margarita",
         "description": "A classic cocktail made with tequila, lime juice, and orange liqueur.",
-        "image": "../image/margarita.jpg",
+        "image": "margarita.jpg",
         "ingredients": [
           {"ingredient": "Tequila", "quantity": "2 oz"},
           {"ingredient": "Lime Juice", "quantity": "1 oz"},
@@ -18,7 +18,7 @@
         "id": 2,
         "title": "Martini",
         "description": "A classic cocktail made with gin and vermouth, garnished with an olive or a twist.",
-        "image": "../image/martini.jpg",
+        "image": "martini.jpg",
         "ingredients": [
           {"ingredient": "Gin", "quantity": "2 oz"},
           {"ingredient": "Dry Vermouth", "quantity": "1/2 oz"},
@@ -31,7 +31,7 @@
         "id": 3,
         "title": "Old Fashioned",
         "description": "A timeless cocktail made with bourbon, sugar, and bitters.",
-        "image": "../image/old_fashioned.jpg",
+        "image": "old_fashioned.jpg",
         "ingredients": [
           {"ingredient": "Bourbon", "quantity": "2 oz"},
           {"ingredient": "Sugar Cube", "quantity": "1"},
@@ -45,7 +45,7 @@
         "id": 4,
         "title": "Mojito",
         "description": "A refreshing Cuban cocktail made with rum, mint, lime, sugar, and soda water.",
-        "image": "../image/mojito.jpg",
+        "image": "mojito.jpg",
         "ingredients": [
           {"ingredient": "White Rum", "quantity": "2 oz"},
           {"ingredient": "Fresh Mint Leaves", "quantity": "8-10"},
@@ -60,7 +60,7 @@
         "id": 5,
         "title": "Cosmopolitan",
         "description": "A popular cocktail made with vodka, triple sec, cranberry juice, and lime juice.",
-        "image": "../image/cosmopolitan.jpg",
+        "image": "cosmopolitan.jpg",
         "ingredients": [
           {"ingredient": "Vodka", "quantity": "1 1/2 oz"},
           {"ingredient": "Triple Sec", "quantity": "1 oz"},
@@ -75,7 +75,7 @@
         "id": 6,
         "title": "Negroni",
         "description": "A classic Italian cocktail made with gin, vermouth, and Campari.",
-        "image": "../image/negroni.jpg",
+        "image": "negroni.jpg",
         "ingredients": [
           {"ingredient": "Gin", "quantity": "1 oz"},
           {"ingredient": "Sweet Vermouth", "quantity": "1 oz"},
@@ -89,7 +89,7 @@
         "id": 7,
         "title": "Pina Colada",
         "description": "A tropical cocktail made with rum, coconut cream, and pineapple juice.",
-        "image": "../image/pina_colada.jpg",
+        "image": "pina_colada.jpg",
         "ingredients": [
           {"ingredient": "White Rum", "quantity": "2 oz"},
           {"ingredient": "Coconut Cream", "quantity": "2 oz"},
