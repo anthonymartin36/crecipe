@@ -20,7 +20,7 @@ function Cocktails() {
       return (
         <><Nav />
         <div className="loading"  id="loading">
-        <div className='container' id='container'>
+        <div className='content'>
           <h1 className="loading-heading">Something's broken!</h1>
         </div>
         </div>
@@ -32,7 +32,7 @@ function Cocktails() {
       return (
         <><Nav />
         <div className="loading"  id="loading">
-        <div className='container' id='container'>
+        <div className='content'>
           <h1 className="loading-heading">Just a Sec!!</h1>
           <p> This site may take 20 seconds to warm up! Please wait ... </p>
         </div>
@@ -46,7 +46,7 @@ function Cocktails() {
         <Nav />
         <div className='cocktail' id='cocktail'>
         <div className='container' id='container'>
-            List of Cocktail
+            <h2>List of Cocktail</h2>
             {cocktail.map((c : any) => ( 
         <div className='content' key={c.id} >
         <p> <Link className="cocktail-list-name" to={`${c.id}`} >{c.title}</Link> </p> 

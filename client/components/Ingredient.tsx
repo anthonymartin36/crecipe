@@ -21,7 +21,7 @@ function Ingredient() {
     return (
     <><Nav />
       <div className="loading" id="loading">
-      <div className='container' id='container'>
+      <div className='content'>
         <h1 className="loading-heading">Something's broken!</h1>
       </div>
       </div>
@@ -33,7 +33,7 @@ function Ingredient() {
     return (
       <><Nav />
       <div className="loading" id="loading">
-      <div className='container' id='container'>
+      <div className='content'>
         <h1 className="loading-heading">Just a Sec!!</h1>
         <p> This site may take 20 seconds to warm up! Please wait ... </p>
       </div>
