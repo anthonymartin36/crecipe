@@ -4,6 +4,8 @@ import {Link,  useParams } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { getAIngredient } from '../api/api-cocktails.ts'
 import './Cocktail.css'
+const imageUrl = import.meta.env.VITE_IMAGE_URL
+
 
 function Ingredient() {
   const { ingredient } = useParams()
@@ -48,10 +50,15 @@ function Ingredient() {
       <div className='cocktail' id='cocktail'>
       <div className='container' id='container'>
       <div className='content' >
+      <Link to='/cocktail'>Back to Cocktails</Link>
       <h2>Cocktails containing :  { ingredient } </h2> 
       {cocktail.map((index: any) => (
-        <p key={index.id}> <Link to={`/cocktail/${index.id}`} >{index.title} : {index.description}</Link> </p>
-        ))}
+      <div className='content' key={index} >
+      <p> 
+       <div className='cocktails' id='cocktails'> <img src={`${imageUrl}${index.image}`} alt={index.description}/>
+       <Link className="cocktail-list-name" to={`/cocktail/${index.id}`} >{index.title}</Link> <br/>{index.description}</div></p> 
+     </div>
+      ))}
       </div>
       </div>
       </div>

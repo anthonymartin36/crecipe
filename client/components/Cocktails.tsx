@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query'
 import { getAllCocktailApi } from '../api/api-cocktails.ts'
 import { Link } from 'react-router-dom'
 import './Cocktail.css'
+const imageUrl = import.meta.env.VITE_IMAGE_URL
 
 function Cocktails() {
     //const { data } = useFruits()
@@ -49,7 +50,9 @@ function Cocktails() {
             <h2>List of Cocktail</h2>
             {cocktail.map((c : any) => ( 
         <div className='content' key={c.id} >
-        <p> <Link className="cocktail-list-name" to={`${c.id}`} >{c.title}</Link> </p> 
+        <p> 
+        <div className='cocktails' id='cocktails'> <img src={`${imageUrl}${c.image}`} alt={c.description}/>
+          <Link className="cocktail-list-name" to={`${c.id}`} >{c.title}</Link> <br/>{c.description}</div></p> 
         </div>
         ))}
         </div> </div>
