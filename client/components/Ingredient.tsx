@@ -52,13 +52,17 @@ function Ingredient() {
       <div className='content' >
       <Link to='/cocktail'>Back to Cocktails</Link>
       <h2>Cocktails containing :  { ingredient } </h2> 
+
       {cocktail.map((index: any) => (
-      <div className='content' key={index} >
-      <p> 
-       <div className='cocktails' id='cocktails'> <img src={`${imageUrl}${index.image}`} alt={index.description}/>
-       <Link className="cocktail-list-name" to={`/cocktail/${index.id}`} >{index.title}</Link> <br/>{index.description}</div></p> 
+      <div className='cocktails' id='cocktails' key={`${index.id}`} >
+      <p > 
+       <Link className="cocktail-list-name" to={`/cocktail/${index.id}`} >
+        <img src={`${imageUrl}${index.image}`} alt={index.description}/>
+       <strong>{index.title} - {index.id} </strong><br/>{index.description}</Link>
+       </p> 
      </div>
       ))}
+
       </div>
       </div>
       </div>

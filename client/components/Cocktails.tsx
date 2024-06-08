@@ -49,10 +49,13 @@ function Cocktails() {
         <div className='container' id='container'>
             <h2>List of Cocktail</h2>
             {cocktail.map((c : any) => ( 
-        <div className='content' key={c.id} >
+        <div className='cocktails' id='cocktails' key={c.id} >
         <p> 
-        <div className='cocktails' id='cocktails'> <img src={`${imageUrl}${c.image}`} alt={c.description}/>
-          <Link className="cocktail-list-name" to={`${c.id}`} >{c.title}</Link> <br/>{c.description}</div></p> 
+        <Link className="cocktail-list-name" to={`${c.id}`} >
+         
+        <img src={`${imageUrl}${c.image}`} alt={c.description}/>
+        <strong>{c.title} </strong>  <br/>{c.description}</Link>
+        </p> 
         </div>
         ))}
         </div> </div>
