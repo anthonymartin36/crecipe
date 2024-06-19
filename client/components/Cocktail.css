@@ -58,7 +58,8 @@
 
     .cocktail .container img {
         padding: 3rem;
-        width: 70vw;
+        width: 80vw;
+        height: 70vh;
     }
 
     .cocktail .container .col-2 {
@@ -68,9 +69,10 @@
     .cocktails img {
         float: left;
         border: 1px solid #ddd;
-        border-radius: 4px;
+        border-radius: 1px;
         padding: 5px;
-        width: 50vw;
+        width: 25vw;
+        height: 25hw;
       }
       
     .cocktails img:hover {

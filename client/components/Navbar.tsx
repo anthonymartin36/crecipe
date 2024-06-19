@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {FaBars, FaTimes} from 'react-icons/fa'
 import logo from '../picture/logo1.png'
-
+//import Search from './Search.tsx' // <Search />
 import './Navbar.css'
 
 const Navbar = () => {
@@ -26,10 +26,10 @@ const Navbar = () => {
                         <a href='/' onClick={closeMenu}> Home </a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#about' onClick={closeMenu}> About </a>
+                        <a href='/about' onClick={closeMenu}> About </a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#projects' onClick={closeMenu}> Projects </a>
+                    
                     </li>
                 </ul>
             </nav>

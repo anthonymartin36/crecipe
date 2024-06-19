@@ -1,8 +1,9 @@
 import request from 'superagent'
 // import { Cocktail } from '../../models/cocktails'
-const rootUrl = import.meta.env.VITE_API_URL //|| 'https://cocktail-z2ed.onrender.com/api/v1/cocktails/'
+const rootUrl = import.meta.env.VITE_API_URL //|| https://mpser.onrender.com/api/v1/
 
 export async function getAllCocktailApi(){ 
+  console.log("rootURL : ", rootUrl)
     try {
       const response = await request.get(`${rootUrl}`)
       return response.body

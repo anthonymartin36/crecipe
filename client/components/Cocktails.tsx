@@ -51,7 +51,7 @@ function Cocktails() {
             {cocktail.map((c : any) => ( 
         <div className='cocktails' id='cocktails' key={c.id} >
         <p> 
-        <Link className="cocktail-list-name" to={`${c.id}`} >
+        <Link className="cocktail-list-name" to={`/cocktail/${c.id}`} replace >
          
         <img src={`${imageUrl}${c.image}`} alt={c.description}/>
         <strong>{c.title} </strong>  <br/>{c.description}</Link>

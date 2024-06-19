@@ -8,6 +8,7 @@ import {
   import Cocktails from './components/Cocktails'   
   import Cocktail from './components/Cocktail' 
   import Ingredient from './components/Ingredient'  
+  import About from './components/About'
 
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -16,7 +17,8 @@ import {
           <Route index element={<Home />} />
           <Route path="cocktail/" element={<Cocktails />} />
           <Route path="cocktail/:cId"  element={<Cocktail />} />        
-          <Route path="/cocktail/:cId/:ingredient" element={<Ingredient/>}/>
+          <Route path="cocktail/:cId/:ingredient" element={<Ingredient/>}/>
+          <Route path="about" element={<About/>}/>
         </Route>
       </>,
     ),
