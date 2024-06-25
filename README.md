@@ -1,4 +1,4 @@
-# Boilerplate: Fullstack with Sass
+# Cocktail Recipe : list of interconnected Cocktails
 
 ## Setup
 
